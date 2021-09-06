@@ -1,3 +1,3 @@
 #!/usr/bin/python3
 str = "Holberton School"
-print("{}".format(str*3)+ "\nHolberton")
+print(str * 3+ "\n" + str[0:9])
