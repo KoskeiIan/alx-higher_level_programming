@@ -4,22 +4,23 @@
 '''
 
 
-class BaseGeometry():
-    '''
-        Represents a BaseGeometry class
-    '''
+class BaseGeometry:
+    """An empty class"""
+
     def area(self):
-        '''
-            method to raise exception if area was not implemented
-        '''
+        """Raises an exception because...
+        area is not implemented
+        """
         raise Exception("area() is not implemented")
 
     def integer_validator(self, name, value):
-        '''
-            method to validate value
-            Raise TypeError and ValueError
-        '''
+        """Validates the inputs: name and values
+        Args:
+            name(str) - input name as string
+            value(int): pararams validator
+        """
         if type(value) != int:
             raise TypeError("{} must be an integer".format(name))
         if value <= 0:
             raise ValueError("{} must be greater than 0".format(name))
+        return value
